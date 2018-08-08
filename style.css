@@ -129,15 +129,19 @@ ul.CTAs a {
     margin-bottom: 5px;
 }
 
-a.download {
-    background: #fff;
-    color: #7386D5;
+
+#sidebarCollapse {
+    width: 40px;
+    height: 40px;
+    background: lightgrey;
+    cursor: pointer;
 }
 
-a.article,
-a.article:hover {
-    background: #6d7fcc !important;
-    color: #fff !important;
+#sidebarCollapse:hover {
+    width: 40px;
+    height: 40px;
+    background: #6d7fcc;
+    cursor: pointer;
 }
 
 /* ---------------------------------------------------
@@ -156,6 +160,14 @@ a.article:hover {
 ----------------------------------------------------- */
 
 @media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+        transform: rotateY(90deg);
+    }
+    #sidebar.active {
+        margin-left: 0;
+        transform: none;
+    }
     #sidebar {
         margin-left: -250px;
     }
@@ -184,6 +196,21 @@ a.article:hover {
   border: 2px solid lightblue;
   background-color: lightblue;
   text-align: center;
+}
+
+div.titulo_coluna {
+  display: flex;
+  justify-content: space-between;
+}
+
+button.addButton {
+  text-decoration:none;
+  background-color: lightslategray;
+
+}
+
+i {
+  border-color: red;
 }
 
 body{
@@ -218,6 +245,7 @@ div.corpo_coluna ul li{
 
 h1 {
   padding-bottom: 5px;
+  text-align: left;
 }
 
 h2,p{

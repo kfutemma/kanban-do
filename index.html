@@ -1,31 +1,39 @@
 <!doctype html>
 <html>
-    <head>
-        <title>Kanban-Do - You do, just imagine it.</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        </head>
-    <body>
-        <div class="wrapper">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <title>Kanban-Do - Your board, your way.</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Bootstrap Sidebar</h3>
+                <h3>Menu</h3>
             </div>
 
             <ul class="list-unstyled components">
-                <p>Dummy Heading</p>
                 <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <a href="#">Home</a>
                 </li>
+                <p>Boards</p>
                 <li>
                     <a href="#">About</a>
                 </li>
                 <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                    <a href="#">Pages</a>
                     </ul>
                 </li>
             </ul>
@@ -37,95 +45,96 @@
                 <div class="container-fluid">
 
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <i class="fas fa-align-left"></i>
-                        <span>Toggle Sidebar</span>
+                        <span class="glyphicon glyphicon-plus"></span> 
                     </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                        </ul>
-                    </div>
+                </div>
+                <div>
+                    <a class="navbar-brand" href="#">Kanban-Do</a>
                 </div>
             </nav>
 
-            <div class="container">
-        <div class="row">
+        <div class="container">
+            <div class="row">
 
-            <div class="col-md-2 col-xs-12 header_coluna">
-                <h1>BOARD</h1>
-                <h2>Creator</h2>
-            </div>
-            <div class="col-md-3 col-xs-12 header_coluna">
-                <h1>TO DO</h1>
-                <div class="corpo_coluna">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <h2>Title #1</h2>
-                                <p>Text Content #1</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                            <h2>Title #2</h2>
-                            <p>Text Content #2</p>
-                            </a>
-                        </li>     
-                    </ul>
+                <div class="col-md-2 col-xs-12 header_coluna">
+                    <h1>BOARD</h1>
+                    <h2>Creator</h2>
+                    <h2>Kaique Futemma</h2>
                 </div>
-            </div>
-            <div class="col-md-3 col-xs-12 header_coluna">
-                <h1>DOING</h1>
-                <div class="corpo_coluna">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <h2>Title #1</h2>
-                                <p>Text Content #1</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                            <h2>Title #2</h2>
-                            <p>Text Content #2</p>
-                            </a>
-                        </li>     
-                    </ul>
+                <div class="col-md-3 col-xs-12 header_coluna">
+                    <div class="titulo_coluna">
+                        <h1>TO DO</h1>
+                        <button type="button" class="btn btn-default btn-lg addButton">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>    
+                    <div class="corpo_coluna">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <h2>Title #1</h2>
+                                    <p>Text Content #1</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                <h2>Title #2</h2>
+                                <p>Text Content #2</p>
+                                </a>
+                            </li>      
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 col-xs-12 header_coluna">
-                <h1>DONE</h1>
-                <div class="corpo_coluna">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <h2>Title #1</h2>
-                                <p>Text Content #1</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                            <h2>Title #2</h2>
-                            <p>Text Content #2</p>
-                            </a>
-                        </li>     
-                    </ul>
+                <div class="col-md-3 col-xs-12 header_coluna">
+                    <div class="titulo_coluna">
+                        <h1>DOING</h1>
+                        <button type="button" class="btn btn-default btn-lg addButton">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>  
+                    <div class="corpo_coluna">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <h2>Title #1</h2>
+                                    <p>Text Content #1</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                <h2>Title #2</h2>
+                                <p>Text Content #2</p>
+                                </a>
+                            </li>     
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-12 header_coluna">
+                    <div class="titulo_coluna">
+                        <h1>DONE</h1>
+                        <button type="button" class="btn btn-default btn-lg addButton">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>  
+                    <div class="corpo_coluna">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <h2>Title #1</h2>
+                                    <p>Text Content #1</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                <h2>Title #2</h2>
+                                <p>Text Content #2</p>
+                                </a>
+                            </li>     
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     
 
@@ -135,15 +144,12 @@
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
-        });
-    </script>
         <script>
             $(document).ready(function() {
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                });
+
                 $('.dropdown').on('show.bs.dropdown', function(e){
                     $(this).find('.dropdown-menu').first().stop(true, true).slideDown(300);
                 });
