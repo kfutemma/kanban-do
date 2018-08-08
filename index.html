@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Kanban-Do - You do, just imagine it.</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        </head>
+    <body>
+        <div class="container-fluid">
+            <nav class="navbar navbar-default" role="navigation">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a id="menu-toggle" href="#" class="navbar-toggle">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                            </a>
+                              <a class="navbar-brand" href="home.xhtml">
+                                  KANBAN-DO
+                              </a>
+                        </div>
+                        <div id="sidebar-wrapper" class="sidebar-toggle">
+                            <ul class="sidebar-nav">
+                                <li>
+                                      teste
+                                </li>
+                                <li>
+                                      teste
+                                </li>
+                                <li>
+                                      teste
+                                </li>
+                              </ul>
+                        </div>
+                      </div>
+                </nav>
+            </div>
+            <div class="container">
+                    <div class="row">
+
+                        <div class="col-xs-2 header_coluna">
+                            <h1>BOARD</h1>
+                            <h2>Creator</h2>
+                        </div>
+                        <div class="col-xs-3 header_coluna">
+                            <h1>TO DO</h1>
+                            <div class="corpo_coluna">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <h2>Title #1</h2>
+                                            <p>Text Content #1</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                        <h2>Title #2</h2>
+                                        <p>Text Content #2</p>
+                                        </a>
+                                    </li>     
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 header_coluna">
+                            <h1>DOING</h1>
+                            <div class="corpo_coluna">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <h2>Title #1</h2>
+                                                <p>Text Content #1</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                            <h2>Title #2</h2>
+                                            <p>Text Content #2</p>
+                                            </a>
+                                        </li>     
+                                    </ul>
+                                </div>
+                        </div>
+                        <div class="col-xs-3 header_coluna">
+                            <h1>DONE</h1>
+                            <div class="corpo_coluna">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <h2>Title #1</h2>
+                                                <p>Text Content #1</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                            <h2>Title #2</h2>
+                                            <p>Text Content #2</p>
+                                            </a>
+                                        </li>     
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $(document).ready(function() {
+                        $('.dropdown').on('show.bs.dropdown', function(e){
+                            $(this).find('.dropdown-menu').first().stop(true, true).slideDown(300);
+                        });
+                        $('.dropdown').on('hide.bs.dropdown', function(e){
+                            $(this).find('.dropdown-menu').first().stop(true, true).slideUp(300);
+                        });
+                        $("#menu-toggle").click(function(e) {
+                            e.preventDefault();
+                            var elem = document.getElementById("sidebar-wrapper");
+                            left = window.getComputedStyle(elem,null).getPropertyValue("left");
+                            if(left == "200px"){
+                                document.getElementsByClassName("sidebar-toggle")[0].style.left="-200px";
+                            }
+                            else if(left == "-200px"){
+                                document.getElementsByClassName("sidebar-toggle")[0].style.left="200px";
+                            }
+                        });
+                    });
+                </script>
+            </body>
+</html>
