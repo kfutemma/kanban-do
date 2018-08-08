@@ -10,121 +10,104 @@
         </head>
     <body>
         <div class="container-fluid">
-            <nav class="navbar navbar-default" role="navigation">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <a id="menu-toggle" href="#" class="navbar-toggle">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                            </a>
-                              <a class="navbar-brand" href="home.xhtml">
-                                  KANBAN-DO
-                              </a>
-                        </div>
-                        <div id="sidebar-wrapper" class="sidebar-toggle">
-                            <ul class="sidebar-nav">
-                                <li>
-                                      teste
-                                </li>
-                                <li>
-                                      teste
-                                </li>
-                                <li>
-                                      teste
-                                </li>
-                              </ul>
-                        </div>
-                      </div>
-                </nav>
-            </div>
-            <div class="container">
-                    <div class="row">
-
-                        <div class="col-xs-2 header_coluna">
-                            <h1>BOARD</h1>
-                            <h2>Creator</h2>
-                        </div>
-                        <div class="col-xs-3 header_coluna">
-                            <h1>TO DO</h1>
-                            <div class="corpo_coluna">
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <h2>Title #1</h2>
-                                            <p>Text Content #1</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                        <h2>Title #2</h2>
-                                        <p>Text Content #2</p>
-                                        </a>
-                                    </li>     
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xs-3 header_coluna">
-                            <h1>DOING</h1>
-                            <div class="corpo_coluna">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <h2>Title #1</h2>
-                                                <p>Text Content #1</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                            <h2>Title #2</h2>
-                                            <p>Text Content #2</p>
-                                            </a>
-                                        </li>     
-                                    </ul>
-                                </div>
-                        </div>
-                        <div class="col-xs-3 header_coluna">
-                            <h1>DONE</h1>
-                            <div class="corpo_coluna">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <h2>Title #1</h2>
-                                                <p>Text Content #1</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                            <h2>Title #2</h2>
-                                            <p>Text Content #2</p>
-                                            </a>
-                                        </li>     
-                                    </ul>
-                                </div>
-                        </div>
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="menu navbar-header">
+                      <a class="navbar-brand" href="#">Kanban-Do</a>
                     </div>
+                    <div>
+                      <ul class="menu nav navbar-default">
+                          <li class="menu">teste</li>
+                      </ul>
+                    </div>
+              </nav>
+        </div>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-2 col-xs-12 header_coluna">
+                <h1>BOARD</h1>
+                <h2>Creator</h2>
+            </div>
+            <div class="col-md-3 col-xs-12 header_coluna">
+                <h1>TO DO</h1>
+                <div class="corpo_coluna">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <h2>Title #1</h2>
+                                <p>Text Content #1</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <h2>Title #2</h2>
+                            <p>Text Content #2</p>
+                            </a>
+                        </li>     
+                    </ul>
                 </div>
-                <script>
-                    $(document).ready(function() {
-                        $('.dropdown').on('show.bs.dropdown', function(e){
-                            $(this).find('.dropdown-menu').first().stop(true, true).slideDown(300);
-                        });
-                        $('.dropdown').on('hide.bs.dropdown', function(e){
-                            $(this).find('.dropdown-menu').first().stop(true, true).slideUp(300);
-                        });
-                        $("#menu-toggle").click(function(e) {
-                            e.preventDefault();
-                            var elem = document.getElementById("sidebar-wrapper");
-                            left = window.getComputedStyle(elem,null).getPropertyValue("left");
-                            if(left == "200px"){
-                                document.getElementsByClassName("sidebar-toggle")[0].style.left="-200px";
-                            }
-                            else if(left == "-200px"){
-                                document.getElementsByClassName("sidebar-toggle")[0].style.left="200px";
-                            }
-                        });
-                    });
-                </script>
-            </body>
+            </div>
+            <div class="col-md-3 col-xs-12 header_coluna">
+                <h1>DOING</h1>
+                <div class="corpo_coluna">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <h2>Title #1</h2>
+                                <p>Text Content #1</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <h2>Title #2</h2>
+                            <p>Text Content #2</p>
+                            </a>
+                        </li>     
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-12 header_coluna">
+                <h1>DONE</h1>
+                <div class="corpo_coluna">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <h2>Title #1</h2>
+                                <p>Text Content #1</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <h2>Title #2</h2>
+                            <p>Text Content #2</p>
+                            </a>
+                        </li>     
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script>
+            $(document).ready(function() {
+                $('.dropdown').on('show.bs.dropdown', function(e){
+                    $(this).find('.dropdown-menu').first().stop(true, true).slideDown(300);
+                });
+                $('.dropdown').on('hide.bs.dropdown', function(e){
+                    $(this).find('.dropdown-menu').first().stop(true, true).slideUp(300);
+                });
+                $("#menu-toggle").click(function(e) {
+                    e.preventDefault();
+                    var elem = document.getElementById("sidebar-wrapper");
+                    left = window.getComputedStyle(elem,null).getPropertyValue("left");
+                    if(left == "200px"){
+                        document.getElementsByClassName("sidebar-toggle")[0].style.left="-200px";
+                    }
+                    else if(left == "-200px"){
+                        document.getElementsByClassName("sidebar-toggle")[0].style.left="200px";
+                    }
+                });
+            });
+        </script>
+    </body>
 </html>
