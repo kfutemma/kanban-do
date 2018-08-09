@@ -70,19 +70,7 @@
                         </button>
                     </div>    
                     <div class="corpo_coluna">
-                        <ul>
-                            <li>
-                                <a href="#" data-toggle="modal" data-target="#myModal">
-                                    <h2>Title #1</h2>
-                                    <p>Text Content #1</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                <h2>Title #2</h2>
-                                <p>Text Content #2</p>
-                                </a>
-                            </li>      
+                        <ul id="lista1">   
                         </ul>
                     </div>
                 </div>
@@ -170,20 +158,20 @@
                                 <div class="form-group">
                                     <label class="col-form-label col-sm-2" for="nome">Title:</label>
                                     <div class="col-xs-12">
-                                        <input name="nome" id="nome" class="form-control" type="text">
+                                        <input name="title1" id="title1" class="form-control" type="text">
                                     </div>
                                 </div>
                                         
                                 <div class="form-group">
                                     <label class="col-form-label col-md-12 ">Content:</label>
                                     <div class="col-sm-5">
-                                        <textarea class="form-control col-md-6 col-xs-12"></textarea>
+                                        <textarea class="form-control col-md-6 col-xs-12" id="content1"></textarea>
                                     </div>
                                 </div>
                             </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Add card</button>
+                        <button type="button" class="btn btn-primary" id="add1">Add card</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                     </div>
                 </div>              
@@ -219,7 +207,26 @@
                         document.getElementsByClassName("sidebar-toggle")[0].style.left="200px";
                     }
                 });
+
+                $("#add1").click(function() {
+                    var title = $("#title1").val();
+                    var content = $("#content1").val();
+
+                    var card = "<li>" + "<a href='#'> <h2>"+ title + "</h2> <p>"+ content + "</p> </li>";
+
+                    //$('#lista1').html(card);
+                    document.getElementById("lista1").innerHTML += card;
+                    $("#title1").val(" ");
+                    $("#content1").val(" ");
+                    $("#modalAddCard1").modal("hide");
+                });
             });
         </script>
     </body>
 </html>
+
+
+
+
+
+
