@@ -217,10 +217,6 @@ button.addButton {
   cursor: pointer;
 }
 
-i {
-  border-color: red;
-}
-
 body{
   font-family:arial,sans-serif;
   background: lightgray;

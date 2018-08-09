@@ -16,6 +16,15 @@
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- CUSTOM JS -->
+    <script type="text/javascript" src="javascript/script.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -44,8 +53,7 @@
         <div id="content">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-
-                    <button type="button" id="sidebarCollapse" class="btn btn-info" style="width: 100px">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info" style="width: 100px;">
                             <span class="glyphicon glyphicon-menu-hamburger"></span> Menu
                     </button>
                 </div>
@@ -69,7 +77,7 @@
                             <i class="fas fa-plus"></i>
                         </button>
                     </div>    
-                    <div class="corpo_coluna">
+                    <div class="corpo_coluna" style="border: 2px solid rgb(239, 95, 104); background-color: rgb(239, 95, 104);">
                         <ul id="lista1">   
                         </ul>
                     </div>
@@ -81,7 +89,7 @@
                             <i class="fas fa-plus"></i>
                         </button>
                     </div>  
-                    <div class="corpo_coluna">
+                    <div class="corpo_coluna" style="border: 2px solid rgb(252, 229, 153); background-color: rgb(252, 229, 153);">
                         <ul>
                             <li>
                                 <a href="#">
@@ -105,7 +113,7 @@
                             <i class="fas fa-plus"></i>
                         </button>
                     </div>  
-                    <div class="corpo_coluna">
+                    <div class="corpo_coluna" style="border: 2px solid rgb(134, 232, 163); background-color: rgb(134, 232, 163);">
                         <ul>
                             <li>
                                 <a href="#">
@@ -177,51 +185,6 @@
                 </div>              
             </div>
         </div>
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-
-    <!-- Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-        <script>
-            $(document).ready(function() {
-                $('#sidebarCollapse').on('click', function () {
-                    $('#sidebar').toggleClass('active');
-                });
-
-                $('.dropdown').on('show.bs.dropdown', function(e){
-                    $(this).find('.dropdown-menu').first().stop(true, true).slideDown(300);
-                });
-                $('.dropdown').on('hide.bs.dropdown', function(e){
-                    $(this).find('.dropdown-menu').first().stop(true, true).slideUp(300);
-                });
-                $("#menu-toggle").click(function(e) {
-                    e.preventDefault();
-                    var elem = document.getElementById("sidebar-wrapper");
-                    left = window.getComputedStyle(elem,null).getPropertyValue("left");
-                    if(left == "200px"){
-                        document.getElementsByClassName("sidebar-toggle")[0].style.left="-200px";
-                    }
-                    else if(left == "-200px"){
-                        document.getElementsByClassName("sidebar-toggle")[0].style.left="200px";
-                    }
-                });
-
-                $("#add1").click(function() {
-                    var title = $("#title1").val();
-                    var content = $("#content1").val();
-
-                    var card = "<li>" + "<a href='#'> <h2>"+ title + "</h2> <p>"+ content + "</p> </li>";
-
-                    //$('#lista1').html(card);
-                    document.getElementById("lista1").innerHTML += card;
-                    $("#title1").val(" ");
-                    $("#content1").val(" ");
-                    $("#modalAddCard1").modal("hide");
-                });
-            });
-        </script>
     </body>
 </html>
 
