@@ -206,7 +206,15 @@ div.titulo_coluna {
 button.addButton {
   text-decoration:none;
   background-color: lightslategray;
-
+  border-radius: 20%;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 i {
