@@ -89,9 +89,9 @@
 
 <?php
     
-    $servername = 'locahost';
-    $user_db = 'root';
-    $password_db = '';
+    $servername = 'root';
+    $user_db = 'beyonce';
+    $password_db = 'teste';
     $db_name = 'users';
 
     $con = mysqli_connect($servername, $user_db, $password_db, $db_name);
