@@ -133,14 +133,14 @@ ul.CTAs a {
 #sidebarCollapse {
     width: 40px;
     height: 40px;
-    background: lightgrey;
+    background: #6d7fcc;
     cursor: pointer;
 }
 
 #sidebarCollapse:hover {
     width: 40px;
     height: 40px;
-    background: #6d7fcc;
+    background: #3e57c5;
     cursor: pointer;
 }
 
@@ -213,7 +213,7 @@ button.addButton {
   text-align: center;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 2px 2px;
   cursor: pointer;
 }
 
