@@ -154,7 +154,7 @@
                     <h3 class="modal-title">Já sou cadastrado</h3>
                 </div>
                 <div class="modal-body">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" action="/verificar.php" method="POST" id="form_login">
                             <div class="form-group">
                                 <label class="col-form-label col-sm-2" for="nome">Usuário:</label>
                                 <div class="col-xs-12">
@@ -168,32 +168,13 @@
                                     <input name="psw" id="pswID" class="form-control" type="password">
                                 </div>
                             </div>
+                            <div class="modal-footer">
+                                <input type="submit" name="submit1" value="Entrar" class="btn btn-info cadastrarBtn">
+                            </div>
                         </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-info cadastrarBtn" data-dismiss="modal">Entrar</button>
                 </div>
             </div>              
         </div>
     </div>
 </body>
 </html>
-
-
-
-
-
-<?php
-    
-    $servername = 'root';
-    $user_db = 'beyonce';
-    $password_db = 'teste';
-    $db_name = 'users';
-
-    $con = mysqli_connect($servername, $user_db, $password_db, $db_name);
-
-    // Check connection
-    if (mysqli_connect_errno()) {
-        echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    }
-?>
