@@ -127,14 +127,20 @@ body{
     padding: 5px;
 }
 
-#cadastrarBtn {
+.cadastrarBtn {
    width: 100%;
    background: #6d7fcc;
    cursor: pointer;
 }
 
-#cadastrarBtn:hover {
+.cadastrarBtn:hover {
     width: 100%;
     background: #3e57c5;
     cursor: pointer;
+}
+
+#newUserPsw1 {
+    width: 45%;
+    float: left;
+    margin-right: 10%;
 }
