@@ -57,7 +57,7 @@
                         <form action="/verificar.php" method="POST" id="form_cadastro">
                             <div class="form-group">
                                 <label for="userName">Nome de usuário</label>
-                                <input type="email" id="userName" class="form-control" placeholder="Usuário">
+                                <input type="text" name="userName" id="userName" class="form-control" placeholder="Usuário">
                             </div>
                             <div class="form-group">
                                 <label for="newUserEmail">Email</label>
@@ -70,7 +70,7 @@
                                     <input type="password" name="newUserPsw2" id="newUserPsw2" class="form-control" placeholder="Confirmar senha" style="width: 45%;">
                                 </div>
                             </div>
-                            <input type="submit" id="cadastrar_btn" value="Cadastrar" class="btn btn-info cadastrarBtn"> 
+                            <input type="submit" name="submit_cadastro" id="cadastrar_btn" value="Cadastrar" class="btn btn-info cadastrarBtn"> 
                             <small class="form-text text-muted">Nós em hipótese alguma compartilharemos suas informações.</small>
                         </form> 
                     </div>
@@ -172,7 +172,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <input type="submit" name="submit1" value="Entrar" class="btn btn-info cadastrarBtn">
+                                <input type="submit" name="submit_login" value="Entrar" class="btn btn-info cadastrarBtn">
                             </div>
                         </form>
                 </div>

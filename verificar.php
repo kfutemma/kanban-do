@@ -1,25 +1,34 @@
 <?php
 
-    if (isset($_POST['submit_cadastro'])) {
+    #var_dump($_POST['submit_cadastro']);
 
+    if (isset($_POST['submit_cadastro'])) {
+       
+        #-- databases keys
         $host = 'localhost';
-        $user_db = 'mathcas';
-        $password_db = 'mathcas';
+        $user_db = 'admin';
+        $password_db = 'teste';
         $db_name = 'dsw';
+
+        echo "essa merda"; 
+    
+        $connection = mysqli_connect($host, $user_db, $password_db, $db_name);
+    
+        #----------------------------------
+        #-- New user form inputs to back-end
+        
         $username = $_POST['userName'];
         $email = $_POST['newUserEmail'];
         $psw = $_POST['newUserPsw1'];
-        $psw2 = $_POST['newUserPsw2'];
+        $psw2 = $_POST['newUserPsw2']; 
 
-        $connection = mysqli_connect($host, $user_db, $password_db, $db_name);
-
-        // Check connection
+        
+        # Check connection
         if ($connection) {
             echo "Conexão efetuada com sucesso! <br>";
 
             if ($psw == $psw2){
-                $query = "INSERT INTO users(username, password) ";
-                $query .= "VALUES('$username', '$psw');";
+                $query = "INSERT INTO users(username, email, password) VALUES('$username', '$email', '$psw');";
                 $result = mysqli_query($connection, $query);
                 if (!$result) {
                     $error = mysqli_error();
@@ -37,20 +46,25 @@
         else {
             echo "A conexão com o banco falhou! <br>";
         }
-    }    
+    }      
 
+    var_dump($_POST['submit_login']);
     if (isset($_POST['submit_login'])) {
 
-		$username = $_POST['userName'];
-		$password = $_POST['senha'];
-
-		$host = 'localhost';
-        $user_db = 'mathcas';
-        $password_db = 'mathcas';
+		#-- databases keys
+        $host = 'localhost';
+        $user_db = 'admin';
+        $password_db = 'teste';
         $db_name = 'dsw';
 
-        $connection = mysqli_connect($host, $user_db, $password_db, $db_name);
+         $connection = mysqli_connect($host, $user_db, $password_db, $db_name);
 
+        #----------------------------------
+        #-- Login form inputs to back-end
+        $username = $_POST['user'];
+		$password = $_POST['psw'];
+
+        # Check connection
         if ($connection) {
             echo "Conexão efetuada com sucesso! <br>";
 
@@ -59,14 +73,13 @@
             $result = mysqli_fetch_row($result);
 
             if ($result) {
-			    echo "Welcome! <br>";
+                 header('Location: /perfil.html'); 
 			} else {
 			    echo "Ops! Something's wrong...";
 			}
     	}  		      
     }
     
-
     /*
         CREATE DATABASE dsw;
 
