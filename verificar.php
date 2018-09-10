@@ -73,7 +73,7 @@
             $result = mysqli_fetch_row($result);
 
             if ($result) {
-                 header('Location: /perfil.html'); 
+                 header('Location: /index.html'); 
 			} else {
 			    echo "Ops! Something's wrong...";
 			}

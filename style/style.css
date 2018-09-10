@@ -338,3 +338,11 @@ div.corpo_coluna ul li a{
 
 
 
+.newCards {
+  color: #6d7fcc;
+}
+
+.newCards textarea {
+  min-width: 259%; 
+  max-width: 259%; 
+}

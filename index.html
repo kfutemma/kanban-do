@@ -82,48 +82,26 @@
                 <div class="col-md-3 col-xs-12 header_coluna">
                     <div class="titulo_coluna">
                         <h1>DOING</h1>
-                        <button type="button" class="btn btn-default btn-lg addButton">
+                        <button type="button" class="btn btn-default btn-lg addButton" data-toggle="modal" data-target="#modalAddCard2">
                             <i class="fas fa-plus"></i>
                         </button>
                     </div>  
                     <div class="corpo_coluna" style="border: 2px solid rgb(0, 193, 236); background-color: rgb(0, 193, 236);">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <h2>Title #1</h2>
-                                    <p>Text Content #1</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                <h2>Title #2</h2>
-                                <p>Text Content #2</p>
-                                </a>
-                            </li>     
+                        <ul id="lista2">
+                               
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-3 col-xs-12 header_coluna">
                     <div class="titulo_coluna">
                         <h1>DONE</h1>
-                        <button type="button" class="btn btn-default btn-lg addButton">
+                        <button type="button" class="btn btn-default btn-lg addButton" data-toggle="modal" data-target="#modalAddCard3">
                             <i class="fas fa-plus"></i>
                         </button>
                     </div>  
                     <div class="corpo_coluna" style="border: 2px solid rgb(0, 222, 62); background-color: rgb(0, 222, 62);">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <h2>Title #1</h2>
-                                    <p>Text Content #1</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                <h2>Title #2</h2>
-                                <p>Text Content #2</p>
-                                </a>
-                            </li>     
+                        <ul id="lista3">
+                              
                         </ul>
                     </div>
                 </div>
@@ -131,44 +109,87 @@
         </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
+    <!-- Card click MODAL - first column -->
+    <div class="modal fade newCards" id="myModal" role="dialog">
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
                     <div class="modal-header">
                     <span class="close">&times;</span>
-                    <h4 class="modal-title">Editar Candidato</h4>
+                    <h3 class="modal-title" contenteditable="true">Teste</h3>
                 </div>
                 <div class="modal-body">
                     <p>teste</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                 </div>
             </div>              
         </div>
     </div>
 
-    <div class="modal fade" id="modalAddCard1" role="dialog">
+    <!-- Card click MODAL - Second column -->
+    <div class="modal fade newCards" id="myModal2" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                    <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h3 class="modal-title" contenteditable="true">Teste</h3>
+                </div>
+                <div class="modal-body">
+                    <p>teste</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>              
+        </div>
+    </div>
+
+
+    <!-- Card click MODAL - Third column -->
+    <div class="modal fade newCards" id="myModal3" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                    <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h3 class="modal-title" contenteditable="true">Teste</h3>
+                </div>
+                <div class="modal-body">
+                    <p>teste</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>              
+        </div>
+    </div>
+
+
+
+    <!-- ADD MODAL - FIRST COLUMN -->
+
+    <div class="modal fade newCards" id="modalAddCard1" role="dialog">
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
                     <div class="modal-header">
                     <span class="close" data-dismiss="modal">&times;</span>
-                    <h4 class="modal-title">New card</h4>
+                    <h3 class="modal-title">New card</h3>
                 </div>
                 <div class="modal-body">
                         <form class="form-horizontal">
                             <div class="form-group">
-                                <label class="col-form-label col-sm-2" for="nome">Title:</label>
+                                <label class="col-form-label col-sm-2" for="title1">Title:</label>
                                 <div class="col-xs-12">
                                     <input name="title1" id="title1" class="form-control" type="text">
                                 </div>
                             </div>
                                     
                             <div class="form-group">
-                                <label class="col-form-label col-md-12 ">Content:</label>
+                                <label class="col-form-label col-md-12" for="content1">Content:</label>
                                 <div class="col-sm-5">
                                     <textarea class="form-control col-md-6 col-xs-12" id="content1"></textarea>
                                 </div>
@@ -177,7 +198,77 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" id="add1">Add card</button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>              
+        </div>
+    </div>
+
+    <!-- ADD MODAL - SECOND COLUMN -->
+
+    <div class="modal fade newCards" id="modalAddCard2" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                    <div class="modal-header">
+                    <span class="close" data-dismiss="modal">&times;</span>
+                    <h3 class="modal-title">New card</h3>
+                </div>
+                <div class="modal-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-form-label col-sm-2" for="title2">Title:</label>
+                                <div class="col-xs-12">
+                                    <input name="title2" id="title2" class="form-control" type="text">
+                                </div>
+                            </div>
+                                    
+                            <div class="form-group">
+                                <label class="col-form-label col-md-12" for="content2">Content:</label>
+                                <div class="col-sm-5">
+                                    <textarea class="form-control col-md-6 col-xs-12" id="content2"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="add2">Add card</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>              
+        </div>
+    </div>
+
+    <!-- ADD MODAL - THIRD COLUMN -->
+
+    <div class="modal fade newCards" id="modalAddCard3" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                    <div class="modal-header">
+                    <span class="close" data-dismiss="modal">&times;</span>
+                    <h3 class="modal-title">New card</h3>
+                </div>
+                <div class="modal-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-form-label col-sm-2" for="title3">Title:</label>
+                                <div class="col-xs-12">
+                                    <input name="title3 id="title3" class="form-control" type="text">
+                                </div>
+                            </div>
+                                    
+                            <div class="form-group">
+                                <label class="col-form-label col-md-12" for="content3">Content:</label>
+                                <div class="col-sm-5">
+                                    <textarea class="form-control col-md-6 col-xs-12" id="content3"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="add3">Add card</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                 </div>
             </div>              
         </div>
