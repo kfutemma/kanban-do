@@ -39,12 +39,16 @@
 
             <ul class="list-unstyled components">
                 <li class="active">
-                    <a href="#">Perfil</a>
+                    <p>Boards</p>
+                    <button type="button" id="newBoard" class="btn btn-info">
+                        <span class="glyphicon glyphicon-plus"></span> New board
+                    </button>
                 </li>
-                <p>Boards</p>
+                
                 <li>
-                    <a href="#">About</a>
+                    <p>teste</p>
                 </li>
+                <a href="#">About</a>
             </ul>
 
         </nav>
