@@ -1,10 +1,8 @@
 <?php 
         $host = 'localhost';
         $user_db = 'admin';
-        $password_db = 'teste';
+        $password_db = 'admin';
         $db_name = 'dsw';
-
-        echo "essa merda"; 
     
         $connection = mysqli_connect($host, $user_db, $password_db, $db_name);
 ?>

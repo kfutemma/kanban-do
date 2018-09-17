@@ -194,18 +194,41 @@
                             <div class="form-group">
                                 <label class="col-form-label col-md-12" for="content1">Content:</label>
                                 <div class="col-sm-5">
-                                    <textarea class="form-control col-md-6 col-xs-12" id="content1"></textarea>
+                                    <textarea class="form-control col-md-6 col-xs-12" id="content1" name='content1'></textarea>
                                 </div>
                             </div>
                         </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="add1">Add card</button>
+                    <input type="submit" name="add1" id='add1' value="Adicionar" class="btn btn-primary">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                 </div>
             </div>              
         </div>
     </div>
+
+    <?php 
+
+if (isset($_POST['add1'])) {
+  
+    #-- Login form inputs to back-end
+    $title1 = $_POST['title1'];
+    $content1 = $_POST['content1'];
+    # Check connection
+    if ($connection) {
+
+        $query = "INSERT INTO cards(title, state, description, boardID) VALUES('$title1', 1, '$content1', xxx);";
+        $result = mysqli_query($connection, $query);
+        $result = mysqli_fetch_row($result);
+        if ($result) {
+                header('Location: /index.html'); 
+        } else {
+            echo "Ops! Something's wrong...";
+        }
+    }  
+}
+
+    ?>
 
     <!-- ADD MODAL - SECOND COLUMN -->
 
@@ -235,12 +258,35 @@
                         </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="add2">Add card</button>
+                    <input type="submit" name="add2" id="add2" value="Adicionar" class="btn btn-primary">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                 </div>
             </div>              
         </div>
     </div>
+
+        <?php 
+
+if (isset($_POST['add1'])) {
+  
+    #-- Login form inputs to back-end
+    $title1 = $_POST['title1'];
+    $content1 = $_POST['content1'];
+    # Check connection
+    if ($connection) {
+
+        $query = "INSERT INTO cards(title, state, description, boardID) VALUES('$title1', 1, '$content1', xxx);";
+        $result = mysqli_query($connection, $query);
+        $result = mysqli_fetch_row($result);
+        if ($result) {
+                header('Location: /index.html'); 
+        } else {
+            echo "Ops! Something's wrong...";
+        }
+    }  
+}
+
+    ?>
 
     <!-- ADD MODAL - THIRD COLUMN -->
 
@@ -257,7 +303,7 @@
                             <div class="form-group">
                                 <label class="col-form-label col-sm-2" for="title3">Title:</label>
                                 <div class="col-xs-12">
-                                    <input name="title3 id="title3" class="form-control" type="text">
+                                    <input name="title3" id="title3" class="form-control" type="text">
                                 </div>
                             </div>
                                     
@@ -270,12 +316,35 @@
                         </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="add3">Add card</button>
+                <input type="submit" name="add3" id="add3" value="Adicionar" class="btn btn-primary">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                 </div>
             </div>              
         </div>
     </div>
+
+    <?php 
+
+if (isset($_POST['add1'])) {
+  
+    #-- Login form inputs to back-end
+    $title1 = $_POST['title1'];
+    $content1 = $_POST['content1'];
+    # Check connection
+    if ($connection) {
+
+        $query = "INSERT INTO cards(title, state, description, boardID) VALUES('$title1', 1, '$content1', xxx);";
+        $result = mysqli_query($connection, $query);
+        $result = mysqli_fetch_row($result);
+        if ($result) {
+                header('Location: /index.html'); 
+        } else {
+            echo "Ops! Something's wrong...";
+        }
+    }  
+}
+
+    ?>
 </body>
 </html>
 
