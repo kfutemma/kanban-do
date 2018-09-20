@@ -17,8 +17,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 
     <!-- Bootstrap JS -->
@@ -28,7 +27,7 @@
 </head>
 <body>
 
-    <?php include 'db.php';?>
+   
 
     <div class="wrapper">
         <nav id="sidebar">
@@ -71,8 +70,8 @@
 
                 <div class="col-md-2 col-xs-12 header_coluna">
                     <h1>BOARD</h1>
-                    <h2>Creator</h2>
-                    <h2>Kaique Futemma</h2>
+                    <h2>Código</h2>
+                    <h2 id="codigoBoard">1</h2>
                 </div>
                 <div class="col-md-3 col-xs-12 header_coluna">
                     <div class="titulo_coluna">
@@ -211,28 +210,7 @@
         </div>
     </div>
 
-    <?php 
 
-if (isset($_POST['add1'])) {
-  
-    #-- Login form inputs to back-end
-    $title1 = $_POST['title1'];
-    $content1 = $_POST['content1'];
-    # Check connection
-    if ($connection) {
-
-        $query = "INSERT INTO cards(title, state, description, boardID) VALUES('$title1', 1, '$content1', xxx);";
-        $result = mysqli_query($connection, $query);
-        $result = mysqli_fetch_row($result);
-        if ($result) {
-                header('Location: /index.html'); 
-        } else {
-            echo "Ops! Something's wrong...";
-        }
-    }  
-}
-
-    ?>
 
     <!-- ADD MODAL - SECOND COLUMN -->
 

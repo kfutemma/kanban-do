@@ -27,10 +27,25 @@ $(document).ready(function() {
     $("#add1").click(function() {
         var title = $("#title1").val();
         var content = $("#content1").val();
+        var code = $("#codigoBoard").text();
 
         var card = "<li>" + "<a href='#' data-toggle='modal' data-target='#myModal'> <h2>"+ title + "</h2> <p>"+ content + "</p> </li>";
+        
+        $.ajax({
+        type: 'POST',
+        url:"inserir.php",
+        data:{title1:title, content1:content, code1:code},
+          success:function(data, status, jqXHR){
+              
+              $('#title1').val("");
+              $('#content1').val("");
+              $('#dataNasc').val("");
+          },
+          error: function(data){
+              //console.log(data);
+          } 
+        });
 
-        //$('#lista1').html(card);
         document.getElementById("lista1").innerHTML += card;
         $("#title1").val(" ");
         $("#content1").val(" ");

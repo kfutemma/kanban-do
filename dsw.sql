@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS users (
 */
 CREATE TABLE IF NOT EXISTS boards (
 	ID int AUTO_INCREMENT PRIMARY KEY,
+	creator text,
 	timestamp TIMESTAMP
 );
 
