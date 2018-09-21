@@ -1,6 +1,6 @@
 <?php 
         $host = 'localhost';
-        $user_db = 'admin1';
+        $user_db = 'admin';
         $password_db = 'admin';
         $db_name = 'dsw';
     

@@ -1,3 +1,4 @@
+DROP DATABASE dsw;
 CREATE DATABASE dsw;
 
 USE dsw;
@@ -12,7 +13,10 @@ CREATE TABLE IF NOT EXISTS users (
 */
 CREATE TABLE IF NOT EXISTS boards (
 	ID int AUTO_INCREMENT PRIMARY KEY,
-	creator text,
+	name VARCHAR(30),
+	first_column VARCHAR(30),
+	second_column VARCHAR(30),
+	third_column VARCHAR(30),
 	timestamp TIMESTAMP
 );
 
@@ -26,3 +30,9 @@ CREATE TABLE IF NOT EXISTS cards (
 	FOREIGN KEY (boardID) REFERENCES boards(ID)
 );
 
+
+insert into boards(name, first_column, second_column, third_column)
+VALUES ('AAA', 'Coluna 1','Coluna 2','Coluna 3');
+
+insert into cards(title, STATE, description, boardID)
+VALUES ('Teste', 1,'Teste de descricao', 1);

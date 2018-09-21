@@ -28,28 +28,22 @@ $(document).ready(function() {
         var title = $("#title1").val();
         var content = $("#content1").val();
         var code = $("#codigoBoard").text();
-
-        var card = "<li>" + "<a href='#' data-toggle='modal' data-target='#myModal'> <h2>"+ title + "</h2> <p>"+ content + "</p> </li>";
         
         $.ajax({
         type: 'POST',
-        url:"inserir.php",
+        url:"php_scripts/inserir.php",
         data:{title1:title, content1:content, code1:code},
           success:function(data, status, jqXHR){
               
-              $('#title1').val("");
-              $('#content1').val("");
-              $('#codigoBoard').val("");
+            $('#title1').val("");
+            $('#content1').val("");
+            $('#codigoBoard').val("");  
+            $("#modalAddCard1").modal("hide");
           },
           error: function(data){
               //console.log(data);
           } 
         });
-
-        document.getElementById("lista1").innerHTML += card;
-        $("#title1").val(" ");
-        $("#content1").val(" ");
-        $("#modalAddCard1").modal("hide");
     });
 
     // ------------------------------------------------------------------
