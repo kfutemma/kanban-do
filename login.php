@@ -54,23 +54,23 @@
                     <h1>Abrir uma conta</h1>
 
                     <div>
-                        <form>
+                        <form action="/verificar.php" method="POST" id="form_cadastro">
                             <div class="form-group">
                                 <label for="userName">Nome de usuário</label>
-                                <input type="email" id="userName" class="form-control" placeholder="Usuário">
+                                <input type="text" name="userName" id="userName" class="form-control" placeholder="Usuário">
                             </div>
                             <div class="form-group">
                                 <label for="newUserEmail">Email</label>
-                                <input type="email" class="form-control" id="newUserEmail" placeholder="Digite seu email">
+                                <input type="email" class="form-control" name="newUserEmail" id="newUserEmail" placeholder="Digite seu email">
                             </div>
                             <div class="form-group">
                                 <label for="newUserPsw1">Senha</label>
                                 <div class="inlineinput">
-                                    <input type="password" id="newUserPsw1" class="form-control" placeholder="Digite sua senha">
-                                    <input type="password" id="newUserPsw2" class="form-control" placeholder="Confirmar senha" style="width: 45%;">
+                                    <input type="password" name="newUserPsw1" id="newUserPsw1" class="form-control" placeholder="Digite sua senha">
+                                    <input type="password" name="newUserPsw2" id="newUserPsw2" class="form-control" placeholder="Confirmar senha" style="width: 45%;">
                                 </div>
                             </div>
-                            <input type="submit" id="cadastrar_btn" value="Cadastrar" class="btn btn-info cadastrarBtn"> 
+                            <input type="submit" name="submit_cadastro" id="cadastrar_btn" value="Cadastrar" class="btn btn-info cadastrarBtn"> 
                             <small class="form-text text-muted">Nós em hipótese alguma compartilharemos suas informações.</small>
                         </form> 
                     </div>
@@ -121,7 +121,10 @@
 
             <ul class="list-unstyled">
               <li>
-                <a href="#!">Link 1</a>
+                <a href="https://www.linkedin.com/in/kaiquefutemma/">Kaique Futemma</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/kaiquefutemma/">Matheus Castro</a>
               </li>
             </ul>
 
@@ -169,7 +172,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <input type="submit" name="submit1" value="Entrar" class="btn btn-info cadastrarBtn">
+                                <input type="submit" name="submit_login" value="Entrar" class="btn btn-info cadastrarBtn">
                             </div>
                         </form>
                 </div>

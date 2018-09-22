@@ -155,6 +155,17 @@ ul.CTAs a {
     transition: all 0.3s;
 }
 
+#newBoard {
+    text-decoration:none;
+    background-color: #6d7fcc; 
+    width: 100%;   
+}
+
+#newBoard:hover {
+    background: #3e57c5;
+    cursor: pointer;
+}
+
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
@@ -338,3 +349,11 @@ div.corpo_coluna ul li a{
 
 
 
+.newCards {
+  color: #6d7fcc;
+}
+
+.newCards textarea {
+  min-width: 259%; 
+  max-width: 259%; 
+}

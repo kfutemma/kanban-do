@@ -36,9 +36,7 @@
                     </div>
                     <div style="float: right; padding-top: 8px;">
                         <label style="padding-right: 10px;" for="sidebarCollapse">Já sou cadastrado </label>
-                        <button type="button" id="sidebarCollapse" class="btn btn-info" style="width: 100px;">
-                                Login
-                        </button>
+                        <button type="button" id="sidebarCollapse" class="btn btn-info" style="width: 100px;"" data-toggle="modal" data-target="#login_modal">Login</button>
                     </div>
                 </div>
             </nav>
@@ -56,48 +54,130 @@
                     <h1>Abrir uma conta</h1>
 
                     <div>
-                        <form>
+                        <form action="/verificar.php" method="POST" id="form_cadastro">
                             <div class="form-group">
                                 <label for="userName">Nome de usuário</label>
-                                <input type="email" id="userName" class="form-control" placeholder="Usuário">
+                                <input type="email" name="userName" id="userName" class="form-control" placeholder="Usuário">
                             </div>
                             <div class="form-group">
                                 <label for="newUserEmail">Email</label>
-                                <input type="email" class="form-control" id="newUserEmail" placeholder="Digite seu email">
+                                <input type="email" class="form-control" name="newUserEmail" id="newUserEmail" placeholder="Digite seu email">
                             </div>
                             <div class="form-group">
                                 <label for="newUserPsw1">Senha</label>
-                                <div class="form-inline ">
-                                    <input type="password" id="newUserPsw1" class="form-control" placeholder="Digite sua senha" style="width: 49.7%">
-                                    <input type="password" id="newUserPsw2" class="form-control" placeholder="Confirmar senha" style="width: 49.6%">
-                                    <small class="form-text text-muted">Nós em hipótese alguma compartilharemos suas informações.</small>
+                                <div class="inlineinput">
+                                    <input type="password" name="newUserPsw1" id="newUserPsw1" class="form-control" placeholder="Digite sua senha">
+                                    <input type="password" name="newUserPsw2" id="newUserPsw2" class="form-control" placeholder="Confirmar senha" style="width: 45%;">
                                 </div>
                             </div>
-                            <input type="submit" id="cadastrarBtn" value="Cadastrar" class="btn btn-info"> 
+                            <input type="submit" name="submit_cadastro" id="cadastrar_btn" value="Cadastrar" class="btn btn-info cadastrarBtn"> 
+                            <small class="form-text text-muted">Nós em hipótese alguma compartilharemos suas informações.</small>
                         </form> 
                     </div>
                     
                 </div>                
             </div>
         </div>
-    </body>
+        <footer class="page-footer font-small blue pt-4">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+
+          <!-- Content -->
+          <h5 class="text-uppercase">Kanban-do</h5>
+          <p>Kanban-do é um projeto realizado por Kaique Futemma e Matheus Castro. Trabalho dedicado a disciplina de desenvolvimento WEB dada pelo Instituto Federal de São Paulo - Campus Campinas pelos professores André Bordignon e Henrique.</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="text-uppercase">Links úteis</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.cmp.ifsp.edu.br/">IFSP</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="text-uppercase">Social media</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.linkedin.com/in/kaiquefutemma/">Kaique Futemma</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/kaiquefutemma/">Matheus Castro</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="#">Kaique Futemma</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+  <!-- Modal -->
+    <div class="modal fade" id="login_modal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                    <div class="modal-header">
+                    <span class="close" data-dismiss="modal" style="color: red;">&times;</span>
+                    <h3 class="modal-title">Já sou cadastrado</h3>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" action="/verificar.php" method="POST" id="form_login">
+                            <div class="form-group">
+                                <label class="col-form-label col-sm-2" for="nome">Usuário:</label>
+                                <div class="col-xs-12">
+                                    <input name="user" id="userID" class="form-control" type="text">
+                                </div>
+                            </div>
+                                    
+                            <div class="form-group">
+                                <label class="col-form-label col-sm-2" for="nome">Senha:</label>
+                                <div class="col-xs-12">
+                                    <input name="psw" id="pswID" class="form-control" type="password">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="submit" name="submit_login" value="Entrar" class="btn btn-info cadastrarBtn">
+                            </div>
+                        </form>
+                </div>
+            </div>              
+        </div>
+    </div>
+</body>
 </html>
-
-
-
-
-
-<?php
-    
-    $servername = 'locahost';
-    $user_db = 'root';
-    $password_db = '';
-    $db_name = 'users';
-
-    $con = mysqli_connect($servername, $user_db, $password_db, $db_name);
-
-    // Check connection
-    if (mysqli_connect_errno()) {
-        echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    }
-?>
