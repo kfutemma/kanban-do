@@ -9,24 +9,24 @@
                     <h3 class="modal-title">New card</h3>
                 </div>
                 <div class="modal-body">
-                        <form class="form-horizontal">
+                        <form class="form-horizontal" method='GET' action='new_card_1.php'>
                             <div class="form-group">
-                                <label class="col-form-label col-sm-2" for="title1">Title:</label>
+                                <label class="col-form-label col-sm-2" for="title1">Titulo:</label>
                                 <div class="col-xs-12">
                                     <input name="title1" id="title1" class="form-control" type="text">
                                 </div>
                             </div>
                                     
                             <div class="form-group">
-                                <label class="col-form-label col-md-12" for="content1">Content:</label>
+                                <label class="col-form-label col-md-12" for="content1">Conteúdo:</label>
                                 <div class="col-sm-5">
                                     <textarea class="form-control col-md-6 col-xs-12" id="content1" name='content1'></textarea>
                                 </div>
                             </div>
+                            <input type="submit" name="add1" id='add1' value="Adicionar" class="btn btn-primary">
                         </form>
                 </div>
                 <div class="modal-footer">
-                    <input type="submit" name="add1" id='add1' value="Adicionar" class="btn btn-primary">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                 </div>
             </div>              
