@@ -48,6 +48,7 @@
             <div class="row">
 
                 <div class="col-md-2 col-xs-12 header_coluna">
+<<<<<<< HEAD
                     <h1>BOARD</h1>
                     <h2>Código</h2>
                     <h2 id="codigoBoard">1</h2>
@@ -55,45 +56,76 @@
                 <div class="col-md-3 col-xs-12 header_coluna">
                     <div class="titulo_coluna">
                         <h1>TO DO</h1>
+=======
+                    <h1><?php require 'php_scripts/load_name_board.php'; ?></h1>
+                </div>
+                <div class="col-md-3 col-xs-12 header_coluna">
+                    <div class="titulo_coluna">
+                        <h1>
+                            <?php require 'php_scripts/load_name_column_1.php'; ?>
+                        </h1>
+>>>>>>> 759416b025f64873c35e50fbdf7f36fc857ea6ad
                         <button type="button" class="btn btn-default btn-lg addButton" data-toggle="modal" data-target="#modalAddCard1">
                             <i class="fas fa-plus"></i>
                         </button>
                     </div>    
                     <div class="corpo_coluna" style="border: 2px solid rgb(255, 109, 85); background-color: rgb(255, 109, 85);">
                         <ul id="lista1">   
+<<<<<<< HEAD
                             <?php 
                                  require 'php_scripts/load_1_colomn.php';
                             ?>
+=======
+                            <?php require 'php_scripts/load_1_colomn.php'; ?>
+>>>>>>> 759416b025f64873c35e50fbdf7f36fc857ea6ad
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-3 col-xs-12 header_coluna">
                     <div class="titulo_coluna">
+<<<<<<< HEAD
                         <h1>DOING</h1>
+=======
+                        <h1><?php require 'php_scripts/load_name_column_2.php';?></h1>
+>>>>>>> 759416b025f64873c35e50fbdf7f36fc857ea6ad
                         <button type="button" class="btn btn-default btn-lg addButton" data-toggle="modal" data-target="#modalAddCard2">
                             <i class="fas fa-plus"></i>
                         </button>
                     </div>  
                     <div class="corpo_coluna" style="border: 2px solid rgb(0, 193, 236); background-color: rgb(0, 193, 236);">
                         <ul id="lista2">
+<<<<<<< HEAD
                             <?php 
                                  require 'php_scripts/load_2_colomn.php';
                             ?>    
+=======
+                            <?php require 'php_scripts/load_2_colomn.php' ;?>
+>>>>>>> 759416b025f64873c35e50fbdf7f36fc857ea6ad
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-3 col-xs-12 header_coluna">
                     <div class="titulo_coluna">
+<<<<<<< HEAD
                         <h1>DONE</h1>
+=======
+
+                        <h1><?php require 'php_scripts/load_name_column_3.php';?></h1>
+
+>>>>>>> 759416b025f64873c35e50fbdf7f36fc857ea6ad
                         <button type="button" class="btn btn-default btn-lg addButton" data-toggle="modal" data-target="#modalAddCard3">
                             <i class="fas fa-plus"></i>
                         </button>
                     </div>  
                     <div class="corpo_coluna" style="border: 2px solid rgb(0, 222, 62); background-color: rgb(0, 222, 62);">
                         <ul id="lista3">
+<<<<<<< HEAD
                             <?php 
                                  require 'php_scripts/load_3_colomn.php';
                             ?> 
+=======
+                            <?php require 'php_scripts/load_3_colomn.php'; ?> 
+>>>>>>> 759416b025f64873c35e50fbdf7f36fc857ea6ad
                         </ul>
                     </div>
                 </div>

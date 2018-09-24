@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 DROP DATABASE dsw;
+=======
+DROP DATABASE IF EXISTS dsw;
+>>>>>>> 759416b025f64873c35e50fbdf7f36fc857ea6ad
 CREATE DATABASE dsw;
 
 USE dsw;
@@ -35,4 +39,11 @@ insert into boards(name, first_column, second_column, third_column)
 VALUES ('AAA', 'Coluna 1','Coluna 2','Coluna 3');
 
 insert into cards(title, STATE, description, boardID)
+<<<<<<< HEAD
 VALUES ('Teste', 1,'Teste de descricao', 1);
+=======
+VALUES ('Teste', 1,'Teste de descricao', 1);
+
+insert into boards(name, first_column, second_column, third_column)
+VALUES ('KANBAN', 'TO DO','WIP','DONE');
+>>>>>>> 759416b025f64873c35e50fbdf7f36fc857ea6ad
