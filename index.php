@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Kanban-Do - yourr board, your way.</title>
+    <title>Kanban-Do - your board, your way.</title>
 
     <!-- Bootstrap CSS CDN -->
 

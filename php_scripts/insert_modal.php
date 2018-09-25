@@ -9,7 +9,7 @@
                     <h3 class="modal-title">New card</h3>
                 </div>
                 <div class="modal-body">
-                        <form class="form-horizontal" method='GET' action='new_card_1.php'>
+                        <form class="form-horizontal" id="target1" method='POST' action='new_card_1.php'>
                             <div class="form-group">
                                 <label class="col-form-label col-sm-2" for="title1">Titulo:</label>
                                 <div class="col-xs-12">

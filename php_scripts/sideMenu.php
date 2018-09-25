@@ -24,6 +24,13 @@
             while($row = mysqli_fetch_assoc($result)) {
                 echo "<li id='boardID{$row['ID']}'><a href='index.php?ID={$row['ID']}'>{$row['name']}</a></li>";
             }
+
+            if(isset($_GET['ID'])){
+                $product_id = $_GET['ID'];
+                $cookie_name = "id";  
+                $cookie_value = $product_id;
+                setcookie($cookie_name, $cookie_value);
+            }
         ?>
 
     </ul>

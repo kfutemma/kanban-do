@@ -5,12 +5,14 @@
 
 	if(isset($_GET['ID'])){
 	  $product_id = $_GET['ID'];
-	} else {
+	} 
+    else {
 	  echo "failed";
 	}
 
+
 	if ($connection) {
-        $query = "SELECT * FROM cards WHERE state = 1 AND ID = $product_id";
+        $query = "SELECT * FROM cards WHERE state = 1 AND boardID = $product_id";
         //$row = mysql_fetch_row($result);
         $result = mysqli_query($connection, $query);
 

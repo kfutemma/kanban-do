@@ -25,25 +25,8 @@ $(document).ready(function() {
     // -------------------------------------------------------------------------------------------------------
 
     $("#add1").click(function() {
-        var title = $("#title1").val();
-        var content = $("#content1").val();
-        var code = $("#codigoBoard").text();
-        
-        $.ajax({
-        type: 'POST',
-        url:"php_scripts/inserir.php",
-        data:{title1:title, content1:content, code1:code},
-          success:function(data, status, jqXHR){
-              
-            $('#title1').val("");
-            $('#content1').val("");
-            $('#codigoBoard').val("");  
-            $("#modalAddCard1").modal("hide");
-          },
-          error: function(data){
-              //console.log(data);
-          } 
-        });
+      print('FOI');
+      $("#target1").submit();
     });
 
     // ------------------------------------------------------------------
