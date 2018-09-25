@@ -23,50 +23,8 @@ $(document).ready(function() {
         }
     });
     // -------------------------------------------------------------------------------------------------------
-
-    $("#add1").click(function() {
-        jQuery('#add1').prop('disabled', false);
-      $("#target1").submit();
-    });
-
-    // ------------------------------------------------------------------
-
-    $("#add2").click(function() {
-        var title = $("#title2").val();
-        var content = $("#content2").val();
-
-        var card = "<li>" + "<a href='#' data-toggle='modal' data-target='#myModal2'> <h2>"+ title + "</h2> <p>"+ content + "</p> </li>";
-
-        //$('#lista1').html(card);
-        document.getElementById("lista2").innerHTML += card;
-        $("#title2").val(" ");
-        $("#content2").val(" ");
-        $("#modalAddCard2").modal("hide");
-    });
-
-    // ------------------------------------------------------------------
-
-    $("#add3").click(function() {
-        var title = $("#title3").val();
-        var content = $("#content3").val();
-
-        var card = "<li>" + "<a href='#' data-toggle='modal' data-target='#myModal3'> <h2>"+ title + "</h2> <p>"+ content + "</p> </li>";
-
-        //$('#lista1').html(card);
-        document.getElementById("lista3").innerHTML += card;
-        $("#title3").val(" ");
-        $("#content3").val(" ");
-        $("#modalAddCard3").modal("hide");
-    });
 });
 
-
-function openModal(id) {
-    $('#edit_card_title_1').val($('#title_1_'+id).text());
-    $('#edit_card_content_1').val($('#content_1_'+id).text());
-    
-    $('#edit_modal_1').modal('show');
-}
 
 function closeModal(modal) {    
     location.reload();
