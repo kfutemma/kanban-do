@@ -19,7 +19,7 @@
         if ($result){
 
         	while($row = mysqli_fetch_assoc($result)) {
-            echo "<li><a href='index.php?boardID={$row['boardID']}&ID={$row['ID']}' data-toggle='modal' data-target='#myModal'><h2>{$row['title']}</h2><p>{$row['description']}</p></li>";
+                echo "<li><a onclick='openModal({$row['ID']})'><h2 id='title_1_{$row['ID']}'>{$row['title']}</h2><p id='content_1_{$row['ID']}'>{$row['description']}</p></li>";
         	}
         }
         else {

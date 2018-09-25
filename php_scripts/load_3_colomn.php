@@ -8,7 +8,7 @@
         $result = mysqli_query($connection, $query);
         
         while($row = mysqli_fetch_assoc($result)) {
-            echo "<li><a href='#' data-toggle='modal' data-target='#myModal'><h2>{$row['title']}</h2><p>{$row['description']}</p></li>";
+            echo "<li><a onclick='openModal()'><h2>{$row['title']}</h2><p>{$row['description']}</p></li>";
         }
     }
 ?>

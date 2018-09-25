@@ -25,7 +25,7 @@
                 echo "<li id='boardID{$row['ID']}'><a href='index.php?ID={$row['ID']}'>{$row['name']}</a></li>";
             }
 
-            if(isset($_GET['ID'])){
+            if(isset($_GET['ID'])) {
                 $product_id = $_GET['ID'];
                 $cookie_name = "id";  
                 $cookie_value = $product_id;
@@ -54,7 +54,7 @@
                     <h3 class="modal-title">New Board</h3>
                 </div>
                 <div class="modal-body">
-                        <form class="form-horizontal" action="/new_board.php" method="get">
+                        <form class="form-horizontal" action="new_board.php" method="get">
                             <div class="form-group">
                                 <label class="col-form-label col-sm-2" for="title1">Title:</label>
                                 <div class="col-xs-12">

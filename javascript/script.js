@@ -25,7 +25,7 @@ $(document).ready(function() {
     // -------------------------------------------------------------------------------------------------------
 
     $("#add1").click(function() {
-      print('FOI');
+        jQuery('#add1').prop('disabled', false);
       $("#target1").submit();
     });
 
@@ -61,6 +61,36 @@ $(document).ready(function() {
 });
 
 
+function openModal(id) {
+    $('#edit_card_title_1').val($('#title_1_'+id).text());
+    $('#edit_card_content_1').val($('#content_1_'+id).text());
+    
+    $('#edit_modal_1').modal('show');
+}
+
+function closeModal(modal) {    
+    location.reload();
+}
+
+function excluirCard(idcandidato){
+
+    var r = confirm("Deseja excluir esse candidato?");
+
+    if(r == true){
+
+      var idRemover = 'http://andrebordignon.esy.es/php/deletacandidato.php?idcandidato='+ idcandidato;
+          $.ajax({
+            url: idRemover,
+              success:function(data){
+                alert(data);
+                  location.reload();
+              },
+              error: function(data){
+                alert(data);
+              }   
+          });
+    }
+}
 
 /* CODIGO PARA RECUPERAR VIA JSON DADOS DO BACKEND
 

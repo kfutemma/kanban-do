@@ -5,14 +5,10 @@
         ini_set('display_erros', 1);
         error_reporting(E_ALL);
 
-        if(isset($_GET['title_board'])){
-            $title = $_GET['title_board'];
-            $column1 = $_GET['coluna1'];
-            $column2 = $_GET['coluna2'];
-            $column3 = $_GET['coluna3'];
-          } else {
-            echo "failed";
-          } 
+        $title = $_GET['title_board'];
+        $column1 = $_GET['coluna1'];
+        $column2 = $_GET['coluna2'];
+        $column3 = $_GET['coluna3'];
 
         if ($connection) {
 
@@ -22,10 +18,9 @@
             $result  = mysqli_query($connection, $query);
             $result2 = mysqli_query($connection, $query2);
 
-            $row = mysql_fetch_row($result);
-
-            if ($result) {
-                header('Location: /index.php?ID=');
+            if ($result2) {
+                $row = mysqli_fetch_assoc($result2);
+                header('Location: index.php?ID='.$row['ID']);
             } else {
                 echo "Ops! Something's wrong...";
             }
